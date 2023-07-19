@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #242530;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator{
+    width: 300px;
+    background-color: #16161d;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px #00000040;
+    font-family: "Helvetica Neue", sans-serif;
+    overflow: hidden;
+}
+
+.result{
+    height: 75px;
+    padding: 20px;
+    text-align: right;
+    color: #fff;
+    font-size: 2.5em;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+}
+
+.buttons button{
+    height: 60px;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* para o botão = ocupar duas colunas */
+.button-result{
+    grid-column: span 2;
+}
+
+.bg-gray{
+    background-color: #2f2f3a;
+}
+
+.bg-light-gray{
+    background-color: #41404e;
+}
+
+/* quando clicar no botão ele fica com a cor mais clara indicando que foi clicado */
+button:active{
+    opacity: 0.9;
+}
+
+.bg-purple{
+    background-color: #4b008f;
+}
