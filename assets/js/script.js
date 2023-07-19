@@ -13,7 +13,7 @@ let restart = false;
 // função de reset
 function updateResult(originClear = false) {
     // condição onde se for true mostrará 0, resetando, se for false mostrará o valor clicado
-    result.innerText = originClear ? 0 : currentNumber.replace(".", ",");
+    result.innerText = originClear ? 0 : currentNumber.replace(",", ".");
 }
 
 // parâmetro digit contém o valor do botão clicado
@@ -73,7 +73,7 @@ function calculate() {
             return;
     }
 
-    // LIMITA AS CASAS DECIMAIS
+    // LIMITA AS CASAS DECIMAIS DO RESULTADO
     // passa o resultado para string, divide em substrings com base no separador ponto,
     // pega a substring na posição 1, e verifica se essa parte decimal ela é maior que 5
     if (resultValue.toString().split(".")[1]?.length > 5) {
@@ -90,7 +90,7 @@ function calculate() {
     updateResult();
 }
 
-// limpa a tela
+// limpa a tela e os cálculos atuais
 function clearCalculator(){
     currentNumber = "";
     firstOperand = null;
